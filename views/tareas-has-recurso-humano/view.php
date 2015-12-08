@@ -2,6 +2,7 @@
 
 use yii\helpers\Html;
 use yii\widgets\DetailView;
+use app\models\TipoTarea;
 
 /* @var $this yii\web\View */
 /* @var $model app\models\TareasHasRecursoHumano */
@@ -26,10 +27,31 @@ $this->params['breadcrumbs'][] = $this->title;
     </p>
 
     <?= DetailView::widget([
-        'model' => $model,
+        'model' => $model->tareasIdtareas,
         'attributes' => [
-            'tareas_idtareas',
-            'recurso_humano_idrecurso_humano',
+            'nombre',
+            'descripcion',
+            'fecha_inicio',
+            'fecha_fin',
+        ],
+    ]) ?>
+    </p>
+
+    <?= DetailView::widget([
+        'model' => $model->recursoHumanoIdrecursoHumano,
+        'attributes' => [
+            'nombre',
+            'puesto',
+            'area',
+            'edad',
+            'antiguedad',
+            'fotografia',
+        ],
+    ]) ?>
+    <?= DetailView::widget([
+        'model' => TipoTarea::getTipo(['tareas_idtareas'=>$model->tareas_idtareas]),
+        'attributes' => [
+            'nombre',
         ],
     ]) ?>
 

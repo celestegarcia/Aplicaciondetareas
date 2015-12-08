@@ -1,7 +1,7 @@
 <?php
 
 namespace app\models;
-
+use app\models\TipoTarea;
 use Yii;
 
 /**
@@ -54,6 +54,12 @@ class TipoTarea extends \yii\db\ActiveRecord
      */
     public function getTareasIdtareas()
     {
+        return $this->hasOne(Tareas::className(), ['idtareas' => 'tareas_idtareas']);
+    }
+
+    public function getTipo()
+    {
+        $tipo = TipoTarea;
         return $this->hasOne(Tareas::className(), ['idtareas' => 'tareas_idtareas']);
     }
 }

@@ -45,8 +45,8 @@ class TareasHasRecursoHumano extends \yii\db\ActiveRecord
         ];
     }
 
-    /**
-     * @return \yii\db\ActiveQuery
+    /*
+ *    * @return \yii\db\ActiveQuery
      */
     public function getTareasIdtareas()
     {
