@@ -14,7 +14,6 @@ use Yii;
  * @property string $fecha_fin
  *
  * @property TareasHasRecursoHumano[] $tareasHasRecursoHumanos
- * @property RecursoHumano[] $recursoHumanoIdrecursoHumanos
  * @property TipoTarea[] $tipoTareas
  */
 class Tareas extends \yii\db\ActiveRecord
@@ -60,14 +59,6 @@ class Tareas extends \yii\db\ActiveRecord
     public function getTareasHasRecursoHumanos()
     {
         return $this->hasMany(TareasHasRecursoHumano::className(), ['tareas_idtareas' => 'idtareas']);
-    }
-
-    /**
-     * @return \yii\db\ActiveQuery
-     */
-    public function getRecursoHumanoIdrecursoHumanos()
-    {
-        return $this->hasMany(RecursoHumano::className(), ['idrecurso_humano' => 'recurso_humano_idrecurso_humano'])->viaTable('tareas_has_recurso_humano', ['tareas_idtareas' => 'idtareas']);
     }
 
     /**

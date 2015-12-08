@@ -57,9 +57,11 @@ class TipoTarea extends \yii\db\ActiveRecord
         return $this->hasOne(Tareas::className(), ['idtareas' => 'tareas_idtareas']);
     }
 
-    public function getTipo()
+    public function getTipo($tipo)
     {
-        $tipo = TipoTarea;
-        return $this->hasOne(Tareas::className(), ['idtareas' => 'tareas_idtareas']);
+        $db = Yii::$app->db;
+        $sql = 'Select * from tipo_tarea where tareas_idtareas = '.$tipo;
+        $resultado = $db->createCommand($sql)->queryOne();
+        return $resultado;
     }
 }

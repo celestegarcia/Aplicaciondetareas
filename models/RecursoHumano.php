@@ -16,7 +16,6 @@ use Yii;
  * @property resource $fotografia
  *
  * @property TareasHasRecursoHumano[] $tareasHasRecursoHumanos
- * @property Tareas[] $tareasIdtareas
  */
 class RecursoHumano extends \yii\db\ActiveRecord
 {
@@ -63,13 +62,5 @@ class RecursoHumano extends \yii\db\ActiveRecord
     public function getTareasHasRecursoHumanos()
     {
         return $this->hasMany(TareasHasRecursoHumano::className(), ['recurso_humano_idrecurso_humano' => 'idrecurso_humano']);
-    }
-
-    /**
-     * @return \yii\db\ActiveQuery
-     */
-    public function getTareasIdtareas()
-    {
-        return $this->hasMany(Tareas::className(), ['idtareas' => 'tareas_idtareas'])->viaTable('tareas_has_recurso_humano', ['recurso_humano_idrecurso_humano' => 'idrecurso_humano']);
     }
 }

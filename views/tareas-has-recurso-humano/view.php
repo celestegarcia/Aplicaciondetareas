@@ -13,7 +13,7 @@ $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="tareas-has-recurso-humano-view">
 
-    <h1><?= Html::encode($this->title) ?></h1>
+    <h1> Asignaciones </h1>
 
     <p>
         <?= Html::a('Update', ['update', 'tareas_idtareas' => $model->tareas_idtareas, 'recurso_humano_idrecurso_humano' => $model->recurso_humano_idrecurso_humano], ['class' => 'btn btn-primary']) ?>
@@ -49,7 +49,7 @@ $this->params['breadcrumbs'][] = $this->title;
         ],
     ]) ?>
     <?= DetailView::widget([
-        'model' => TipoTarea::getTipo(['tareas_idtareas'=>$model->tareas_idtareas]),
+        'model' => TipoTarea::getTipo($model->tareas_idtareas),
         'attributes' => [
             'nombre',
         ],

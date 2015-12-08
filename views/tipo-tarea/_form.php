@@ -2,6 +2,7 @@
 
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
+use yii\helpers\ArrayHelper;
 
 /* @var $this yii\web\View */
 /* @var $model app\models\TipoTarea */
@@ -18,7 +19,13 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'descripcion')->textInput(['maxlength' => true]) ?>
 
-    <?= $form->field($model, 'tareas_idtareas')->textInput() ?>
+    <?= 
+    $form->field($model, 'tareas_idtareas')->dropDownList(
+    		ArrayHelper::map(\app\models\Tareas::find()->asArray()->all(),'idtareas' ,'nombre'), 
+    		['prompt'=>'Selecciona']
+    	);
+
+     ?>
 
     <div class="form-group">
         <?= Html::submitButton($model->isNewRecord ? 'Create' : 'Update', ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>

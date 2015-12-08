@@ -9,6 +9,7 @@ use Yii;
  *
  * @property integer $tareas_idtareas
  * @property integer $recurso_humano_idrecurso_humano
+ * @property integer $idrecurso_humano-tareas
  *
  * @property Tareas $tareasIdtareas
  * @property RecursoHumano $recursoHumanoIdrecursoHumano
@@ -29,8 +30,8 @@ class TareasHasRecursoHumano extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['tareas_idtareas', 'recurso_humano_idrecurso_humano'], 'required'],
-            [['tareas_idtareas', 'recurso_humano_idrecurso_humano'], 'integer']
+            [['tareas_idtareas', 'recurso_humano_idrecurso_humano', 'idrecurso_humano-tareas'], 'required'],
+            [['tareas_idtareas', 'recurso_humano_idrecurso_humano', 'idrecurso_humano-tareas'], 'integer']
         ];
     }
 
@@ -42,11 +43,12 @@ class TareasHasRecursoHumano extends \yii\db\ActiveRecord
         return [
             'tareas_idtareas' => 'Tareas Idtareas',
             'recurso_humano_idrecurso_humano' => 'Recurso Humano Idrecurso Humano',
+            'idrecurso_humano-tareas' => 'Idrecurso Humano Tareas',
         ];
     }
 
-    /*
- *    * @return \yii\db\ActiveQuery
+    /**
+     * @return \yii\db\ActiveQuery
      */
     public function getTareasIdtareas()
     {
