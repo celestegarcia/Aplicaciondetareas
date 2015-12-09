@@ -6,6 +6,7 @@ use yii\grid\GridView;
 /* @var $this yii\web\View */
 /* @var $searchModel app\models\TipoTareaSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
+/* prueba yera */
 
 $this->title = 'Tipo Tareas';
 $this->params['breadcrumbs'][] = $this->title;
