@@ -2,6 +2,7 @@
 
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
+use yii\helpers\ArrayHelper;
 
 /* @var $this yii\web\View */
 /* @var $model app\models\TareasHasRecursoHumano */
@@ -12,7 +13,8 @@ use yii\widgets\ActiveForm;
 
     <?php $form = ActiveForm::begin(); ?>
 
-    <?= $form->field($model, 'tareas_idtareas')->textInput() ?>
+   <?= $form->field($model, 'tareas_idtareas')->dropDownList(ArrayHelper::map(\app\models\Tareas::find()->asArray()->all(),'idtareas' ,'nombre'), 
+    		['prompt'=>'Selecciona']); ?>
 
     <?= $form->field($model, 'recurso_humano_idrecurso_humano')->textInput() ?>
 

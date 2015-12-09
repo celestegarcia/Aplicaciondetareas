@@ -23,10 +23,7 @@ $this->title = 'Proyecto Web';
             <div class="col-lg-3">
                 <h2>Tareas</h2>
 
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                    ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                    fugiat nulla pariatur.</p>
+                <p>Pulse aquí para ver el catalogo de tareas. puede ver las tareas que hay disponibles o ingresar una.</p>
 
                 <p><a class="btn btn-info" href="http://localhost/index.php?r=tareas/index">Tareas &raquo;</a></p>
             </div>
