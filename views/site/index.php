@@ -27,28 +27,28 @@ $this->title = 'Proyecto Web';
 
                 <p>Pulse aquí para ver el catalogo de tareas. puede ver las tareas que hay disponibles o ingresar una.</p>
 
-                <p><a class="btn btn-info" href="http://localhost/index.php?r=tareas/index">Tareas &raquo;</a></p>
+                <p><a class="btn btn-info" href="index.php?r=tareas/index">Tareas &raquo;</a></p>
             </div>
             <div class="col-lg-3">
                 <h2>Recursos Humanos</h2>
 
                 <p>Pulse aquí para ver el catalogo de Recursos humanos. puede ver las personas a las que puede asignar o ingresar alguna.</p>
 
-                <p><a class="btn btn-info" href="http://localhost/index.php?r=recurso-humano/index">RH &raquo;</a></p>
+                <p><a class="btn btn-info" href="index.php?r=recurso-humano/index">RH &raquo;</a></p>
             </div>
             <div class="col-lg-3">
                 <h2>Tipos</h2>
 
                      <p>Pulse aquí para ver los tipos de tareas. puede ver los tipos de tareas que hay o  crear algún tipo.</p>
 
-                <p><a class="btn btn-info" href="http://localhost/index.php?r=tipo-tarea/index">Tipos tareas &raquo;</a></p>
+                <p><a class="btn btn-info" href="index.php?r=tipo-tarea/index">Tipos tareas &raquo;</a></p>
             </div>
             <div class="col-lg-3">
                 <h2>Tareas RH </h2>
 
                     <p>Pulse aquí para crear una tarea asignada a alguna persona. o visualizar las que ya están disponibles.</p>
 
-                <p><a class="btn btn-info" href="http://localhost/index.php?r=tareas-has-recurso-humano/index">Relaci&oacute;n recurso humano &raquo;</a></p>
+                <p><a class="btn btn-info" href="index.php?r=tareas-has-recurso-humano/index">Relaci&oacute;n recurso humano &raquo;</a></p>
             </div>
         </div>
 
