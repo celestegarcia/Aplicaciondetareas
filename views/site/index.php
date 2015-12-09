@@ -2,7 +2,7 @@
 
 /* @var $this yii\web\View */
 
-$this->title = 'My Yii Application';
+$this->title = 'Proyecto Web';
 ?>
 <div class="site-index">
 <div class="row">
@@ -14,7 +14,7 @@ $this->title = 'My Yii Application';
         <p><a class="btn btn-lg btn-success" href="http://www.yiiframework.com">Get started with Yii</a></p>
     </div>
     <div class="col-lg-6">
-        <h1>Aqui sera el webservice del servicio</h1>
+        <div id="cont_bb4548a43f3fece48b56538b5f8430f0"><span id="h_bb4548a43f3fece48b56538b5f8430f0">El Tiempo Tepic</span><script type="text/javascript" async src="http://www.meteored.mx/wid_loader/bb4548a43f3fece48b56538b5f8430f0"></script></div> 
     </div>
 </div>
 
