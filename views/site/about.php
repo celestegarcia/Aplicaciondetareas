@@ -4,15 +4,17 @@
 
 use yii\helpers\Html;
 
-$this->title = 'About';
+$this->title = 'Integrantes del Equipo';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="site-about">
     <h1><?= Html::encode($this->title) ?></h1>
-
-    <p>
-        This is the About page. You may modify the following file to customize its content:
-    </p>
+    	
+    <p>- Celeste Yarasuary García Diaz </p>
+    <p>- Gabriela Itzamar Soto Orozco </p>
+    <p>- Marco Aurelio Yera Partida </p>
+    <p>- Karen Adali Gutierrez de Anda </p>
+    
 
     <code><?= __FILE__ ?></code>
 </div>
